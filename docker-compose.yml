@@ -1,0 +1,9 @@
+services:
+  prettymaps:
+    build: .
+    container_name: prettymaps_webui
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/London
