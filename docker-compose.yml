@@ -7,3 +7,17 @@ services:
     restart: unless-stopped
     environment:
       - TZ=Europe/London
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: prettymaps
+  description:
+    en_US: "A minimal web application to draw customized, highly aesthetic maps from OpenStreetMap data using osmnx and matplotlib."
+  title:
+    custom: "Prettymaps"
+    en_US: "Prettymaps"
+  icon: "https://raw.githubusercontent.com/marceloprates/prettymaps/main/pictures/app_placeholder.png"
+  port_map: "8501"
+  category: "Utilities"
